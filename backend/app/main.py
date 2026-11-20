@@ -78,6 +78,8 @@ app.include_router(reports.router, prefix=api_v1_prefix)
 app.include_router(sys_settings.router, prefix=api_v1_prefix)
 
 # Serve Frontend static assets for local development (Vercel serves them directly at CDN edge)
+frontend_dir = Path(__file__).resolve().parent.parent.parent / "frontend"
 if not os.environ.get("VERCEL") and frontend_dir.exists():
     app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
+
 
