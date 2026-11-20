@@ -8,5 +8,5 @@ if str(backend_dir) not in sys.path:
 
 from app.main import app
 
-# Vercel serverless entrypoint
+# Vercel serverless entrypoints (Vercel checks for 'app' and 'handler')
 handler = app

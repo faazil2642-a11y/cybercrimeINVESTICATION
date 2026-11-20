@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+venv/
+ENV/
+env/
+
+# Databases & local stores
+*.db
+backend/cybertrace.db
+backend/chroma_db/
+chroma_db/
+
+# Local evidence files & reports
+backend/storage/evidence/*
+!backend/storage/evidence/.gitkeep
+backend/storage/reports/*
+!backend/storage/reports/.gitkeep
+backend/storage/temporary/*
+!backend/storage/temporary/.gitkeep
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment files with secrets (keep .env.example)
+backend/.env
+.env
+.vercel

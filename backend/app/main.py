@@ -26,8 +26,12 @@ async def lifespan(app: FastAPI):
         Path(dir_path).mkdir(parents=True, exist_ok=True)
 
     # Initialize SQLite or Postgres database tables
-    create_tables()
+    try:
+        create_tables()
+    except Exception as e:
+        print(f"[Startup Warning] Could not initialize tables automatically: {e}")
     yield
+
 
 
 app = FastAPI(
@@ -73,7 +77,7 @@ app.include_router(knowledge_base.router, prefix=api_v1_prefix)
 app.include_router(reports.router, prefix=api_v1_prefix)
 app.include_router(sys_settings.router, prefix=api_v1_prefix)
 
-# Serve Frontend static assets
-frontend_dir = Path(__file__).resolve().parent.parent.parent / "frontend"
-if frontend_dir.exists():
+# Serve Frontend static assets for local development (Vercel serves them directly at CDN edge)
+if not os.environ.get("VERCEL") and frontend_dir.exists():
     app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
+
