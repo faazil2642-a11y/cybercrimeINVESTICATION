@@ -1,0 +1,6 @@
+TimeCreated,EventId,SubjectUserName,TargetUserName,IpAddress,Message
+2026-11-18T22:01:15Z,4625,ANONYMOUS,admin,198.51.100.12,"An account failed to log on. Subject: Security ID: NULL SID. Failure Reason: Unknown user name or bad password."
+2026-11-18T22:01:20Z,4625,ANONYMOUS,administrator,198.51.100.12,"An account failed to log on. Subject: Security ID: NULL SID. Failure Reason: Unknown user name or bad password."
+2026-11-18T22:01:25Z,4625,ANONYMOUS,service_acc,198.51.100.12,"An account failed to log on. Subject: Security ID: NULL SID. Failure Reason: Unknown user name or bad password."
+2026-11-18T22:01:30Z,4624,ANONYMOUS,service_acc,198.51.100.12,"An account was successfully logged on. Logon Type: 3 (Network). Authentication Package: NTLM."
+2026-11-18T22:02:11Z,4672,service_acc,service_acc,198.51.100.12,"Special privileges assigned to new logon. Privileges: SeDebugPrivilege SeSecurityPrivilege."

@@ -1,0 +1,14 @@
+2026-11-18T22:14:01.102Z auth.warn [sshd] Failed password for root from 192.0.2.45 port 54801 ssh2 [Attempt 1/50]
+2026-11-18T22:14:05.311Z auth.warn [sshd] Failed password for root from 192.0.2.45 port 54805 ssh2 [Attempt 2/50]
+2026-11-18T22:14:09.620Z auth.warn [sshd] Failed password for admin from 192.0.2.45 port 54810 ssh2 [Attempt 3/50]
+2026-11-18T22:14:14.215Z auth.warn [sshd] Failed password for admin from 192.0.2.45 port 54812 ssh2 [Attempt 4/50]
+2026-11-18T22:14:18.841Z auth.warn [sshd] Failed password for deploy from 192.0.2.45 port 54815 ssh2 [Attempt 5/50]
+2026-11-18T22:14:23.109Z auth.warn [sshd] Failed password for deploy from 192.0.2.45 port 54818 ssh2 [Attempt 6/50]
+2026-11-18T22:14:27.450Z auth.warn [sshd] Failed password for srv_backup from 192.0.2.45 port 54820 ssh2 [Attempt 7/50]
+2026-11-18T22:14:32.102Z auth.warn [sshd] Failed password for root from 192.0.2.45 port 54822 ssh2 [Attempt 8/50]
+2026-11-18T22:14:33.411Z auth.warn [sshd] Connection closed by authenticating user root 192.0.2.45 [preauth]
+2026-11-18T22:18:09.441Z auth.info [sshd] Accepted password for srv_backup from 192.0.2.45 port 54890 ssh2
+2026-11-18T22:18:09.490Z auth.info [sshd] pam_unix(sshd:session): session opened for user srv_backup by (uid=0)
+2026-11-18T22:18:10.002Z audit[sudo]: srv_backup : TTY=pts/2 ; PWD=/home/srv_backup ; USER=admin ; COMMAND=/bin/bash
+2026-11-18T22:19:45.112Z audit[sudo]: admin : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/bin/cat /etc/shadow
+2026-11-18T22:20:12.784Z auth.info [sshd] pam_unix(sshd:session): session closed for user srv_backup

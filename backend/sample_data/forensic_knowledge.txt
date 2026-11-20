@@ -1,0 +1,21 @@
+CYBERTRACE AI FORENSIC REFERENCE KNOWLEDGE
+STANDARD INVESTIGATION PROCEDURES & MITRE ATT&CK FRAMEWORK MAPPINGS
+
+1. Brute-Force Authentication (MITRE ATT&CK T1110)
+Adversaries repeatedly attempt authentication across multiple common username combinations or through password spraying techniques.
+Indicators:
+- High volume of EventID 4625 (Logon Failure) or sshd "Failed password" notices occurring in tight chronological sequence (< 10 seconds delta).
+- Target usernames frequently focus on root, admin, deploy, service accounts, and default platform identifiers.
+- A sudden pivot from repeated failed logons to an accepted session (EventID 4624 / sshd Accepted) indicates potential credential compromise or successful dictionary attack.
+
+2. Privilege Escalation & Lateral Movement (MITRE ATT&CK T1548 / T1021)
+Following initial host penetration, attackers attempt local privilege elevation via sudo, su, or Windows token impersonation.
+Indicators:
+- Use of sudo command to spawn interactive shells (e.g., /bin/bash, /bin/sh) by non-administrative service accounts.
+- Execution of commands targeting sensitive credential databases such as /etc/shadow or SAM registry hives.
+- Windows EventID 4672 denoting special privileges (e.g. SeDebugPrivilege) assigned immediately after network logon.
+
+3. Chain-of-Custody Best Practices (NIST SP 800-86)
+- Digital evidence must be preserved write-blocked at point of acquisition.
+- SHA-256 cryptographic hashes must be computed immediately upon ingestion and verified periodically to detect bit-rot or tampering.
+- Analysis must operate strictly on forensic working copies; raw evidence records must remain immutable.

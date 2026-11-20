@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: cybertrace_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: cybertrace_user
+      POSTGRES_PASSWORD: cybertrace_secure_pwd
+      POSTGRES_DB: cybertrace_ai
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cybertrace_user -d cybertrace_ai"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cybertrace_backend
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://cybertrace_user:cybertrace_secure_pwd@postgres:5432/cybertrace_ai
+      SECRET_KEY: ${SECRET_KEY:-cybertrace-production-strong-security-key-2026}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      LLM_PROVIDER: gemini
+      CHROMA_PERSIST_DIRECTORY: /app/chroma_db
+      UPLOAD_DIRECTORY: /app/storage/evidence
+      REPORT_DIRECTORY: /app/storage/reports
+      TEMP_DIRECTORY: /app/storage/temporary
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./storage:/app/storage
+      - ./chroma_db:/app/chroma_db
+      - ../frontend:/frontend
+
+volumes:
+  postgres_data:

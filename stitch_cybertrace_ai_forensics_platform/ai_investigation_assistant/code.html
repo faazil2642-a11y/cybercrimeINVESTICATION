@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131313;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#131313", "background": "#131313", "outline": "#8a919d", "primary-fixed": "#d2e4ff", "on-error-container": "#ffdad6", "surface-dim": "#131313", "outline-variant": "#404752", "error-container": "#93000a", "surface-container": "#1f1f1f", "on-primary": "#003259", "tertiary-fixed": "#e2e2e2", "surface-container-lowest": "#0e0e0e", "on-secondary-container": "#95f5a2", "error": "#ffb4ab", "primary-container": "#52a8ff", "surface-bright": "#393939", "secondary-container": "#027330", "secondary-fixed-dim": "#7cdb8b", "tertiary-container": "#a3a4a4", "inverse-on-surface": "#303030", "on-secondary-fixed": "#002109", "on-surface": "#e2e2e2", "inverse-surface": "#e2e2e2", "surface-tint": "#9fcaff", "on-tertiary-container": "#383a3b", "on-tertiary": "#2f3131", "on-primary-fixed": "#001d37", "on-surface-variant": "#c0c7d3", "primary-fixed-dim": "#9fcaff", "on-error": "#690005", "tertiary-fixed-dim": "#c6c6c7", "on-tertiary-fixed": "#1a1c1c", "secondary": "#7cdb8b", "on-primary-container": "#003c69", "surface-container-high": "#2a2a2a", "on-tertiary-fixed-variant": "#454747", "surface-container-highest": "#353535", "tertiary": "#c6c6c7", "surface-container-low": "#1b1b1b", "primary": "#9fcaff", "on-primary-fixed-variant": "#00497e", "on-secondary-fixed-variant": "#005320", "on-secondary": "#003914", "on-background": "#e2e2e2", "surface-variant": "#353535", "inverse-primary": "#0061a5", "secondary-fixed": "#97f8a4" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "margin-desktop": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-xl": "2rem", "gutter-desktop": "1rem", "gutter": "0.5rem", "margin": "1rem" }, fontFamily: { "headline-xl": ["Inter"], "label-caps": ["JetBrains Mono"], "headline-lg": ["Inter"], "code-md": ["JetBrains Mono"], "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "code-lg": ["JetBrains Mono"], "code-sm": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-md": ["Inter"] }, fontSize: { "headline-xl": ["48px", { "lineHeight": "52px", "letterSpacing": "-3.36px", "fontWeight": "500" }], "label-caps": ["10px", { "lineHeight": "12px", "letterSpacing": "0.8px", "fontWeight": "500" }], "headline-lg": ["36px", { "lineHeight": "40px", "letterSpacing": "-2.2px", "fontWeight": "500" }], "code-md": ["12px", { "lineHeight": "16px", "letterSpacing": "-0.1px", "fontWeight": "400" }], "headline-xl-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "-1.8px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.1px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "22px", "letterSpacing": "-0.5px", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "30px", "letterSpacing": "-1.2px", "fontWeight": "500" }], "code-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "-0.2px", "fontWeight": "400" }], "code-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.2px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "28px", "letterSpacing": "-1.0px", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="h-24 px-space-md flex flex-col justify-between py-space-xs"><div class="flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="CyberTrace AI Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBRjfdIs0RSAO6Z8SWSeMNDsWsALruUqajwWiCi4K_U1rU_1xubCRZAdhqyMRTxla3W9YkLtkc9dM9vWB1kYrqGhhA4OsWpXonoIhsRGFNJAbjUUXixD5ymGoadvRPAOBYDU4pHzUgfYw98z20rrB9_rZ0nidY0SbXSmkFvnHf6Bral7k7XMX_hnN-A4XlLBnYxBKqn2iVz0SHCl0v5fI3jJSKdiIeLYtEzlV-g_7EDKg"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps font-bold tracking-widest text-on-surface uppercase">CYBERTRACE AI</span><span class="px-1.5 py-0.5 bg-surface-container-highest text-primary font-code-sm text-code-sm uppercase rounded-sm">v2.4</span></div><span class="font-label-caps text-label-caps text-on-surface-variant">Ai Assistant</span></div></div><div class="flex items-center gap-space-xs"><div class="hidden xs:flex items-center gap-1.5 px-2 py-1 bg-surface-container-low rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-caps text-label-caps text-secondary font-semibold">SECURE</span></div><span class="px-2 py-1 bg-surface-container-high text-primary font-code-sm text-code-sm uppercase">CT-2026-001</span><button aria-label="Investigation Modules" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="document.getElementById('forensic-drawer').classList.remove('hidden')" type="button"><span class="material-symbols-outlined text-[22px]">menu_open</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between px-space-xs py-1 bg-surface-container-lowest/80 rounded"><div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant"><span class="text-primary font-semibold">ROOT</span><span>/</span><span class="text-on-surface uppercase font-medium">Ai Assistant</span></div><div class="flex items-center gap-1 font-label-caps text-label-caps text-outline"><span class="material-symbols-outlined text-[14px] text-secondary">shield</span><span>L3 ENCRYPTED</span></div></div></div></header><main class="flex flex-col relative w-full px-space-md pt-24 pb-20 bg-surface flex-1"><div class="flex flex-col w-full gap-space-md">
+<!-- PAGE HEADER & MISSION CONTEXT -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">NEURAL REASONING CO-PROCESSOR</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">LATENCY: 240ms</span>
+</div>
+<div class="flex flex-col">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">AI Investigation</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">CyberTrace Intelligence // RAG-powered forensic investigation assistant.</p>
+</div>
+<!-- Active Session Pill -->
+<div class="p-space-xs bg-surface-container-lowest rounded-sm flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span class="font-label-caps text-label-caps tracking-widest text-on-surface font-semibold">SESSION CONTEXT ACTIVE</span>
+</div>
+<div class="font-code-sm text-code-sm text-outline leading-tight break-all">
+        CASE: <span class="text-primary font-medium">CT-2026-001 [UNAUTHORIZED ACCESS]</span> | MODEL: <span class="text-on-surface">CYBERTRACE-FORENSIC-V2</span> (TEMP: 0.1 / DETERMINISTIC)
+      </div>
+</div>
+</section>
+<!-- PANEL 1: HORIZONTAL CASE SELECTOR & INDEXED EVIDENCE DRAWER -->
+<section class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">folder_open</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">CASE EVIDENCE POOL</span>
+</div>
+<span class="font-code-sm text-code-sm text-secondary bg-secondary-container/30 px-2 py-0.5 rounded-full font-medium">SYNCED (2 VECTORS)</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="font-code-md text-code-md text-on-surface font-semibold truncate">CT-2026-001 (Unauthorized System Access)</span>
+<div class="flex items-center gap-2 font-code-sm text-code-sm text-outline truncate">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span>auth_server.log (842 chunks)</span>
+<span>•</span>
+<span>gateway_traffic_sniff.pcap</span>
+</div>
+</div>
+<button aria-label="Swap target case" class="px-2 py-1 bg-surface-container-highest text-primary font-code-sm text-code-sm uppercase rounded hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1 shrink-0" type="button">
+<span>SWAP</span>
+<span class="material-symbols-outlined text-[14px]">swap_vert</span>
+</button>
+</div>
+<!-- Quick Source Filters -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-caps text-label-caps uppercase rounded-full shrink-0 flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[12px]">check_circle</span>
+<span>All Evidence (2)</span>
+</button>
+<button class="px-2.5 py-1 bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps uppercase rounded-full shrink-0 flex items-center gap-1 hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[12px]">menu_book</span>
+<span>Knowledge Base / MITRE ATT&CK</span>
+</button>
+<button class="px-2.5 py-1 bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps uppercase rounded-full shrink-0 flex items-center gap-1 hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[12px]">fingerprint</span>
+<span>Audit Trail</span>
+</button>
+</div>
+</section>
+<!-- PANEL 2: RAG PIPELINE TELEMETRY BAR -->
+<section class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between text-outline">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">account_tree</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">RAG EXECUTION GRAPH</span>
+</div>
+<div class="flex items-center gap-2 font-code-sm text-code-sm">
+<span class="text-secondary font-medium">CONFIDENCE: 98.4%</span>
+</div>
+</div>
+<!-- Telemetry Breadcrumbs Line -->
+<div class="flex items-center overflow-x-auto py-1 gap-1.5 font-code-sm text-code-sm text-outline-variant whitespace-nowrap no-scrollbar">
+<span class="text-primary font-medium">QUERY EMBEDDING</span>
+<span class="text-outline">→</span>
+<span class="text-primary font-medium">SEMANTIC RETRIEVAL (k=8)</span>
+<span class="text-outline">→</span>
+<span class="text-primary font-medium">CHUNK RANKING</span>
+<span class="text-outline">→</span>
+<span class="text-primary font-medium">CONTEXT ASSEMBLY</span>
+<span class="text-outline">→</span>
+<span class="text-secondary font-medium">DETERMINISTIC LLM</span>
+</div>
+</section>
+<!-- PANEL 3: CONVERSATIONAL FORENSIC WORKSPACE -->
+<section class="flex flex-col gap-space-md">
+<!-- User Query Bubble -->
+<div class="flex flex-col items-end gap-1 pl-6">
+<div class="bg-surface-container-high p-space-md rounded-xl rounded-tr-none text-on-surface shadow-md w-full relative">
+<div class="flex items-center justify-between pb-2 mb-2 bg-surface-container-highest/40 -mx-4 -mt-4 px-4 pt-3 rounded-t-xl">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">person</span>
+<span class="font-label-caps text-label-caps text-primary font-semibold uppercase">LEAD FORENSIC INVESTIGATOR</span>
+</div>
+<span class="font-code-sm text-code-sm text-outline">22:15:02 UTC</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-normal">
+          Analyze the uploaded system logs and identify suspicious login activities.
+        </p>
+</div>
+<span class="font-code-sm text-code-sm text-outline-variant pr-1">PROMPT TOKEN COUNT: 38</span>
+</div>
+<!-- AI Response Bubble with Cyber Glow Framing -->
+<div class="flex flex-col gap-2">
+<div class="bg-surface-container-low p-space-md rounded-xl rounded-tl-none shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<!-- Glowing Top Aura Line for AI Persona -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-container to-secondary"></div>
+<!-- AI Message Header -->
+<div class="flex items-center justify-between pb-2 bg-surface-container-lowest/60 -mx-4 -mt-4 px-4 pt-3">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">CYBERTRACE INTELLIGENCE</span>
+<span class="font-code-sm text-code-sm text-outline">DETERMINISTIC VERIFICATION (SEED: 40992)</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-secondary-container/40 text-secondary rounded uppercase font-semibold">VERIFIED</span>
+</div>
+<!-- AI Narrative Body -->
+<div class="flex flex-col gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Three potentially suspicious authentication patterns were identified in the selected evidence corpus. Cross-referencing timestamp telemetry with known intrusion heuristics indicates active initial access pivoting:
+          </p>
+</div>
+<!-- FINDING 01: Structured Forensic Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs shadow-inner">
+<div class="flex items-start justify-between gap-2 pb-space-xs">
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-error tracking-wider uppercase font-bold">FINDING 01 // BRUTE-FORCE DETECTED</span>
+<span class="font-code-md text-code-md text-on-surface font-semibold truncate">Multiple Failed SSH Authentications</span>
+</div>
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-caps text-label-caps uppercase rounded-full shrink-0 font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-error rounded-full animate-ping"></span>
+              CRITICAL
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs py-space-xs bg-surface-container/60 p-2 rounded">
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">FREQUENCY</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium truncate">48 attempts / 180s</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">TIMESTAMP</span>
+<span class="font-code-sm text-code-sm text-on-surface truncate">2026-11-18 22:14:32 UTC</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">SOURCE IP</span>
+<span class="font-code-sm text-code-sm text-primary font-bold truncate flex items-center gap-1">
+                192.0.2.45
+                <button aria-label="Copy IP" class="hover:text-on-surface" onclick="navigator.clipboard?.writeText('192.0.2.45')" type="button"><span class="material-symbols-outlined text-[13px]">content_copy</span></button>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">ATT&CK REF</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium truncate">T1110.001</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-code-sm text-code-sm text-outline-variant">EVIDENCE: auth_server.log (Chunk #42)</span>
+<button class="px-2 py-1 bg-surface-container text-primary font-code-sm text-code-sm rounded hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1 font-semibold" onclick="document.getElementById('chunk-details-042').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>[Source: auth_server.log:142]</span>
+</button>
+</div>
+</div>
+<!-- FINDING 02: Structured Forensic Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs shadow-inner">
+<div class="flex items-start justify-between gap-2 pb-space-xs">
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-tertiary tracking-wider uppercase font-bold">FINDING 02 // PRIVILEGE ELEVATION</span>
+<span class="font-code-md text-code-md text-on-surface font-semibold truncate">Sudo Elevation Post-Success</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-highest text-tertiary font-label-caps text-label-caps uppercase rounded-full shrink-0 font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>
+              WARN
+            </span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs py-space-xs bg-surface-container/60 p-2 rounded">
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">VECTOR BEHAVIOR</span>
+<span class="font-code-sm text-code-sm text-on-surface font-medium truncate">sudo su admin</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">TIMESTAMP</span>
+<span class="font-code-sm text-code-sm text-on-surface truncate">2026-11-18 22:18:09 UTC</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">SOURCE IP</span>
+<span class="font-code-sm text-code-sm text-primary font-bold truncate">192.0.2.45</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-outline uppercase">RECOMMENDATION</span>
+<span class="font-code-sm text-code-sm text-error truncate font-medium">Terminate Session</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-code-sm text-code-sm text-outline-variant">EVIDENCE: auth_server.log (Chunk #49)</span>
+<button class="px-2 py-1 bg-surface-container text-primary font-code-sm text-code-sm rounded hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1 font-semibold" onclick="document.getElementById('chunk-details-049').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>[Source: auth_server.log:168]</span>
+</button>
+</div>
+</div>
+<!-- Sample Disclaimer -->
+<div class="flex items-center gap-2 p-2 bg-surface-container/30 rounded text-outline-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Demonstration forensic sample data. Chain of custody preserved. SHA-256 sealed.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PANEL 4: EVIDENCE RETRIEVAL & SOURCE CITATIONS SHEET -->
+<section class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">dataset</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider font-semibold">RETRIEVED FORENSIC CHUNKS (RAG CITATIONS)</span>
+</div>
+<span class="font-label-caps text-label-caps px-2 py-0.5 bg-surface-container text-outline rounded">TOP 2 OF 8</span>
+</div>
+<!-- Chunk Item 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs" id="chunk-details-042">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">CHUNK ID: CHK-AUTH-042</span>
+<span class="text-outline">|</span>
+<span class="text-secondary font-medium">RELEVANCE: 0.942</span>
+</div>
+<span class="text-on-surface-variant font-medium">Lines 140–146</span>
+</div>
+<div class="p-space-sm bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant overflow-x-auto whitespace-pre no-scrollbar leading-relaxed">2026-11-18T22:14:32.102Z auth.warn [sshd] Failed password for root from 192.0.2.45 port 54822 ssh2 [Attempt 48/50]
+2026-11-18T22:14:33.411Z auth.warn [sshd] Connection closed by authenticating user root 192.0.2.45 [preauth]</div>
+</div>
+<!-- Chunk Item 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded flex flex-col gap-space-xs" id="chunk-details-049">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">CHUNK ID: CHK-AUTH-049</span>
+<span class="text-outline">|</span>
+<span class="text-secondary font-medium">RELEVANCE: 0.918</span>
+</div>
+<span class="text-on-surface-variant font-medium">Lines 167–170</span>
+</div>
+<div class="p-space-sm bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant overflow-x-auto whitespace-pre no-scrollbar leading-relaxed">2026-11-18T22:18:09.441Z auth.info [sshd] Accepted password for srv_backup from 192.0.2.45 port 54890
+2026-11-18T22:18:10.002Z audit[sudo]: srv_backup : TTY=pts/2 ; PWD=/home/srv_backup ; USER=admin ; COMMAND=/bin/bash</div>
+</div>
+</section>
+<!-- PANEL 5: ASSISTANT ACTIONS GRID -->
+<section class="grid grid-cols-2 gap-space-xs">
+<button aria-label="Ask follow up question" class="p-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">chat</span>
+<span class="font-code-sm text-code-sm font-semibold uppercase">Ask Follow-up</span>
+</button>
+<button aria-label="Copy findings" class="p-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 rounded transition-colors" onclick="alert('Forensic findings copied to system clipboard.')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">copy_all</span>
+<span class="font-code-sm text-code-sm font-semibold uppercase">Copy Findings</span>
+</button>
+<button aria-label="View raw logs" class="p-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">terminal</span>
+<span class="font-code-sm text-code-sm font-semibold uppercase">View Log Source</span>
+</button>
+<button aria-label="Generate formal incident PDF" class="p-space-sm bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-error">picture_as_pdf</span>
+<span class="font-code-sm text-code-sm font-semibold uppercase">Export PDF</span>
+</button>
+</section>
+<!-- PANEL 6: FORENSIC CHAT INPUT COMPONENT -->
+<section class="sticky bottom-0 z-30 pt-2 pb-safe bg-surface/90 backdrop-blur-md -mx-space-md px-space-md">
+<div class="flex flex-col gap-1.5 p-space-xs bg-surface-container-lowest rounded-lg shadow-2xl">
+<div class="flex items-center gap-2">
+<!-- Context Attachment Pill Trigger -->
+<button aria-label="Attach Evidence Vector" class="w-9 h-9 flex items-center justify-center bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors shrink-0 rounded" type="button">
+<span class="material-symbols-outlined text-[18px]">attachment</span>
+</button>
+<!-- Case Scope Chip -->
+<button class="px-2 py-1 bg-surface-container-high text-primary font-code-sm text-code-sm rounded flex items-center gap-1 shrink-0 font-medium" type="button">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>k=8</span>
+</button>
+<!-- Input Field with Strict Monospace Styling -->
+<input class="flex-1 min-w-0 bg-transparent text-on-surface placeholder:text-outline font-code-sm text-code-sm py-2 px-1 focus:outline-none" id="rag-query-input" placeholder="Ask CyberTrace about this investigation..." type="text"/>
+<!-- Send Action Button -->
+<button aria-label="Dispatch query to CyberTrace LLM" class="w-10 h-10 bg-primary-container hover:bg-primary text-on-primary-container flex items-center justify-center shrink-0 rounded transition-all shadow-md active:scale-95" id="rag-send-btn" type="button">
+<span class="material-symbols-outlined text-[20px] font-bold">arrow_upward</span>
+</button>
+</div>
+<!-- Security Guarantee Monospace Subtext -->
+<div class="flex items-center justify-between px-1 pb-1 font-label-caps text-label-caps text-outline leading-tight">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified</span>
+          Read-only vector embeddings
+        </span>
+<span class="text-outline-variant font-code-sm text-code-sm">SHA-256 SEALED</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for query dispatch feedback
+  document.getElementById('rag-send-btn')?.addEventListener('click', () => {
+    const input = document.getElementById('rag-query-input');
+    if (!input || !input.value.trim()) return;
+    
+    const query = input.value.trim();
+    input.value = '';
+    input.placeholder = 'Analyzing vector corpus across chunks...';
+    
+    setTimeout(() => {
+      input.placeholder = 'Ask CyberTrace about this investigation...';
+    }, 1500);
+  });
+</script></main><aside class="fixed inset-0 z-50 hidden bg-surface-container-lowest/80 backdrop-blur-md flex" id="forensic-drawer"><div class="w-4/5 max-w-sm h-full bg-surface-container flex flex-col p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.8)]"><div class="flex items-center justify-between pb-space-sm mb-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">hub</span><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-semibold">INVESTIGATIVE MODULES</span></div><button aria-label="Close Drawer" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('forensic-drawer').classList.add('hidden')" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="p-space-sm mb-space-md bg-surface-container-low flex items-center gap-space-sm rounded-full"><div class="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center text-primary font-label-caps text-label-caps font-bold">C</div><div class="flex flex-col"><span class="font-code-sm text-code-sm font-semibold text-on-surface">INV. CHEN</span><span class="font-label-caps text-label-caps text-primary">L3 FORENSIC LEAD</span></div></div><div class="flex-1 overflow-y-auto flex flex-col gap-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span><span class="font-code-md text-code-md uppercase">Log Analyzer</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">travel_explore</span><span class="font-code-md text-code-md uppercase">IP Intelligence</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">timeline</span><span class="font-code-md text-code-md uppercase">Incident Timeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">radar</span><span class="font-code-md text-code-md uppercase">Threat Detection</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">database</span><span class="font-code-md text-code-md uppercase">Knowledge Base</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-code-md text-code-md uppercase">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">policy</span><span class="font-code-md text-code-md uppercase">Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-code-md text-code-md uppercase">Settings</span></a></div><div class="pt-space-sm flex items-center justify-between text-outline"><span class="font-code-sm text-code-sm">NODE: US-EAST-04</span><span class="font-label-caps text-label-caps text-secondary">SESSION ACTIVE</span></div></div><div class="flex-1 h-full" onclick="document.getElementById('forensic-drawer').classList.add('hidden')"></div></aside><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-medium"><div class="h-20 px-space-sm flex items-center justify-around"><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-caps text-label-caps uppercase">OVERVIEW</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-on-surface-variant hover:text-on-surface transition-colors" data-path="cases" href="#"><span class="material-symbols-outlined text-[20px]">folder_supervised</span><span class="font-label-caps text-label-caps uppercase">CASES</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-on-surface-variant hover:text-on-surface transition-colors" data-path="evidence" href="#"><span class="material-symbols-outlined text-[20px]">lock_clock</span><span class="font-label-caps text-label-caps uppercase">EVIDENCE</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-16 transition-colors text-primary font-medium" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-label-caps text-label-caps uppercase">AI ASSIST</span></a></div></nav></body></html>
